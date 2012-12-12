@@ -1,0 +1,55 @@
+{
+"images": ["Exp1_gaslrg.png"],
+"frames": [
+
+    [962, 310, 158, 152], 
+    [802, 310, 158, 152], 
+    [962, 156, 158, 152], 
+    [802, 156, 158, 152], 
+    [962, 2, 158, 152], 
+    [802, 2, 158, 152], 
+    [642, 310, 158, 152], 
+    [642, 156, 158, 152], 
+    [642, 2, 158, 152], 
+    [482, 310, 158, 152], 
+    [482, 156, 158, 152], 
+    [482, 2, 158, 152], 
+    [322, 310, 158, 152], 
+    [322, 156, 158, 152], 
+    [322, 2, 158, 152], 
+    [162, 310, 158, 152], 
+    [162, 156, 158, 152], 
+    [162, 2, 158, 152], 
+    [2, 310, 158, 152], 
+    [2, 156, 158, 152], 
+    [2, 2, 158, 152]
+],
+"animations": {
+    
+        "Exp1_gaslrg-000":[0], 
+        "Exp1_gaslrg-001":[1], 
+        "Exp1_gaslrg-002":[2], 
+        "Exp1_gaslrg-003":[3], 
+        "Exp1_gaslrg-004":[4], 
+        "Exp1_gaslrg-005":[5], 
+        "Exp1_gaslrg-006":[6], 
+        "Exp1_gaslrg-007":[7], 
+        "Exp1_gaslrg-008":[8], 
+        "Exp1_gaslrg-009":[9], 
+        "Exp1_gaslrg-010":[10], 
+        "Exp1_gaslrg-011":[11], 
+        "Exp1_gaslrg-012":[12], 
+        "Exp1_gaslrg-013":[13], 
+        "Exp1_gaslrg-014":[14], 
+        "Exp1_gaslrg-015":[15], 
+        "Exp1_gaslrg-016":[16], 
+        "Exp1_gaslrg-017":[17], 
+        "Exp1_gaslrg-018":[18], 
+        "Exp1_gaslrg-019":[19], 
+        "Exp1_gaslrg-020":[20]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f4a0b7a4e6f3f68a394c86c301b3f16e$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

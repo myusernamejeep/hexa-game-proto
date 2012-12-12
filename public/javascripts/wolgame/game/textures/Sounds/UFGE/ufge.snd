@@ -1,0 +1,41 @@
+=sounds=
+sounds\ufge\block.wav
+
+sounds\ufge\impact1.wav
+sounds\ufge\impact2.wav
+sounds\ufge\impact3.wav
+sounds\ufge\impact4.wav
+sounds\ufge\impact5.wav
+sounds\ufge\impact6.wav
+
+sounds\ufge\landing.wav
+
+sounds\ufge\bounce1.wav
+sounds\ufge\bounce2.wav
+sounds\ufge\bounce3.wav
+
+sounds\ufge\grab.wav
+
+=end=
+
+=fxdef=
+!blocksound 0 0 0 -1
+
+!hitsound 0 0  1 2 -1
+!hitsound 0 4  3 4 -1
+!hitsound 0 7  5 6 -1
+
+!hitsound 2 0 11 -1 
+
+!hitsound 3 0 3 4 -1
+!hitsound 3 5 5 6 -1
+
+!landsound 0 0 7 -1
+!landsound 1 0   8 -1
+!landsound 1 50  9 -1
+!landsound 1 100 10 -1
+
+=end=
+
+=end=
+

@@ -1,0 +1,21 @@
+{
+"images": ["roofrun.png"],
+"frames": [
+
+    [196, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "roofrun0001":[0], 
+        "roofrun0002":[1], 
+        "roofrun0003":[2], 
+        "roofrun0004":[3]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3e37d014c96831b386a0a62cd898faef$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

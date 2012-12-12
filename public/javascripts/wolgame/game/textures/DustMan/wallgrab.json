@@ -1,0 +1,25 @@
+{
+"images": ["wallgrab.png"],
+"frames": [
+
+    [196, 390, 192, 192], 
+    [2, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [2, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "wallgrab0001":[0], 
+        "wallgrab0002":[1], 
+        "wallgrabair0001":[2], 
+        "wallgrabair0002":[3], 
+        "wallgrabairidle0001":[4], 
+        "wallgrabidle0001":[5]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3cc920349b0ea17ebac5a89be085fde9$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

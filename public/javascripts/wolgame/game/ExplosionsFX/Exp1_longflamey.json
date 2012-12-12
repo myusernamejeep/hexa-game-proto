@@ -1,0 +1,61 @@
+{
+"images": ["Exp1_longflamey.png"],
+"frames": [
+
+    [1256, 116, 112, 112], 
+    [1142, 116, 112, 112], 
+    [1256, 2, 112, 112], 
+    [1142, 2, 112, 112], 
+    [1028, 116, 112, 112], 
+    [1028, 2, 112, 112], 
+    [914, 116, 112, 112], 
+    [914, 2, 112, 112], 
+    [800, 116, 112, 112], 
+    [800, 2, 112, 112], 
+    [686, 116, 112, 112], 
+    [686, 2, 112, 112], 
+    [572, 116, 112, 112], 
+    [572, 2, 112, 112], 
+    [458, 116, 112, 112], 
+    [458, 2, 112, 112], 
+    [344, 116, 112, 112], 
+    [344, 2, 112, 112], 
+    [230, 116, 112, 112], 
+    [230, 2, 112, 112], 
+    [116, 116, 112, 112], 
+    [116, 2, 112, 112], 
+    [2, 116, 112, 112], 
+    [2, 2, 112, 112]
+],
+"animations": {
+    
+        "Exp1_longflamey-000":[0], 
+        "Exp1_longflamey-001":[1], 
+        "Exp1_longflamey-002":[2], 
+        "Exp1_longflamey-003":[3], 
+        "Exp1_longflamey-004":[4], 
+        "Exp1_longflamey-005":[5], 
+        "Exp1_longflamey-006":[6], 
+        "Exp1_longflamey-007":[7], 
+        "Exp1_longflamey-008":[8], 
+        "Exp1_longflamey-009":[9], 
+        "Exp1_longflamey-010":[10], 
+        "Exp1_longflamey-011":[11], 
+        "Exp1_longflamey-012":[12], 
+        "Exp1_longflamey-013":[13], 
+        "Exp1_longflamey-014":[14], 
+        "Exp1_longflamey-015":[15], 
+        "Exp1_longflamey-016":[16], 
+        "Exp1_longflamey-017":[17], 
+        "Exp1_longflamey-018":[18], 
+        "Exp1_longflamey-019":[19], 
+        "Exp1_longflamey-020":[20], 
+        "Exp1_longflamey-021":[21], 
+        "Exp1_longflamey-022":[22], 
+        "Exp1_longflamey-023":[23]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6cada0df11600ad3bc13d9172f1ca1d8$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

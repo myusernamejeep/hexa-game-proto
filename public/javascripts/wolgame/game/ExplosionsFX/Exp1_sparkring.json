@@ -1,0 +1,35 @@
+{
+"images": ["Exp1_sparkring.png"],
+"frames": [
+
+    [1082, 2, 106, 104], 
+    [974, 2, 106, 104], 
+    [866, 2, 106, 104], 
+    [758, 2, 106, 104], 
+    [650, 2, 106, 104], 
+    [542, 2, 106, 104], 
+    [434, 2, 106, 104], 
+    [326, 2, 106, 104], 
+    [218, 2, 106, 104], 
+    [110, 2, 106, 104], 
+    [2, 2, 106, 104]
+],
+"animations": {
+    
+        "Exp1_sparkring-000":[0], 
+        "Exp1_sparkring-001":[1], 
+        "Exp1_sparkring-002":[2], 
+        "Exp1_sparkring-003":[3], 
+        "Exp1_sparkring-004":[4], 
+        "Exp1_sparkring-005":[5], 
+        "Exp1_sparkring-006":[6], 
+        "Exp1_sparkring-007":[7], 
+        "Exp1_sparkring-008":[8], 
+        "Exp1_sparkring-009":[9], 
+        "Exp1_sparkring-010":[10]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:9e9e06805996ce129c8b700cb4fdb0de$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

@@ -1,0 +1,21 @@
+{
+"images": ["skids.png"],
+"frames": [
+
+    [196, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "skidturn0001":[0], 
+        "skidturn0002":[1], 
+        "skidturn0003":[2], 
+        "skidturn0004":[3]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f60d9486a6151e269e6edce744587513$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

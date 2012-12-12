@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EaselJS: Simple SpriteSheet Example</title>
+
+	<link href="assets/demoStyles.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="../src/easeljs/utils/UID.js"></script>
+	<script type="text/javascript" src="../src/easeljs/geom/Matrix2D.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/DisplayObject.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Container.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Stage.js"></script>
+	<script type="text/javascript" src="../src/easeljs/events/MouseEvent.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Shape.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Graphics.js"></script>
+	<script type="text/javascript" src="../src/easeljs/utils/Ticker.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/SpriteSheet.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/BitmapAnimation.js"></script>
+	<script type="text/javascript" src="../src/easeljs/geom/Rectangle.js"></script>
+	<script type="text/javascript" src="../src/easeljs/utils/SpriteSheetUtils.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="../javascripts/wolgame/require.js"></script>
+	<script type="text/javascript" src="../javascripts/wolgame/game/textures/splash-naga.js"></script>
+	<script type="text/javascript" src="../javascripts/wolgame/game/textures/dustgirl/dash.json"></script>
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+	  http://code.createjs.com -->
+
+	<script type="text/javascript">
+		var stage;
+		var p1 = {name:'p1',anims:{}};
+		var p2 = {name:'p2',anims:{}};
+		var anim_act = ['attackfx','finishers','jump','groundstrike','sweeps','sweepfx','slides','movementfx','sprint','stuns','idle','victory'];
+		var start_anim_name = 'run';
+		var x = 0, y = 0;
+		var htmlCanvas;
+         	var stage;
+			
+			var leftHeld
+			var rightHeld
+			var keyIsDown
+			var walking;
+       
+        	var imageSheet = new Image();
+           	var bitmapAnimation;
+        	document.onkeydown = keyDownHandler;
+        	document.onkeyup = keyUpHandler;
+        	
+		
+		function init() {
+			stage = new createjs.Stage(document.getElementById("testCanvas"));
+ 	
+ 		 	 load_act_anims(p1, "dustgirl", x, y);
+ 			 x += 200; 
+ 			
+ 		     load_act_anims(p2, "DustMan", x, y, true);
+ 			
+			createjs.Ticker.setFPS(60);
+			createjs.Ticker.addListener(stage);
+			 
+			setInterval(function(){
+				  animate(p1, p2);
+				  animate(p2, p1, true);
+			},1000);
+			
+			 createjs.Ticker.addListener(window);
+		}
+		
+		//called every frame
+        	function tick()
+        	{
+  
+        		stage.update();
+				
+				if(leftHeld&&keyIsDown){
+					p1.x-=4;
+				}
+				
+				
+				if(rightHeld&&keyIsDown){
+					p1.x+=4;
+				}
+				
+				
+        	}
+			
+			function walk(dir){
+			
+				if(!walking){
+					walking=true;
+					var nextState = 10;
+					changeAnimation( anim_act[nextState], anim_act[p1.currentState], false);
+        			p1.currentState = nextState;
+					if(dir=='r'){
+						bitmapAnimation.gotoAndPlay("sweep");
+					}else{
+						bitmapAnimation.gotoAndPlay("sweep_h");
+					}
+				}
+			
+			}
+        	
+        	function keyDownHandler(e)
+        	{
+				var dir;
+				
+        		if(!e)
+        		{
+        			var e = window.event;
+        		}
+        		
+        		switch(e.keyCode)
+        		{
+        			case 37: 
+        				leftHeld = true;
+						keyIsDown = true;
+						dir='l'
+        			break;
+        			
+        			case 39: 
+        				rightHeld = true;
+						keyIsDown = true;
+						dir='r'
+        			break;
+        		}				
+				walk(dir);
+        	}
+        	
+        	function keyUpHandler(e)
+        	{
+        		if(!e)
+        		{
+        			var e = window.event;
+        		}
+        		
+        		switch(e.keyCode)
+        		{
+        			case 37: 
+        				
+						//p1.gotoAndStop("trotLeft");
+       
+						animate(p1, p2, isFlip);
+						keyIsDown = false;
+        				
+						leftHeld = false;
+        			
+						break;
+     			
+        			
+        			case 39: 
+        				
+						//bitmapAnimation.gotoAndStop("trotRight");
+   
+						var nextState = 0;
+						changeAnimation( anim_act[nextState], anim_act[p1.currentState], isFlip);
+        				p1.currentState = nextState;
+						animate(p1, p2, isFlip);
+						keyIsDown = false;
+        				
+						rightHeld = false;
+        			
+						break;
+        		}
+				walking=false;
+        	}
+
+		
+		function load_act_anims(player, textures_name, x, y, isFlip){
+			for(i=0; i<anim_act.length;i++){	
+				var anim_name = anim_act[i];
+				var script_path = "../javascripts/wolgame/game/textures/"+ textures_name +"/"+ anim_name +".json";
+				var images_pth = "../javascripts/wolgame/game/textures/"+ textures_name +"/"+ anim_name +".png";
+				load_animation(script_path, images_pth, x, y, anim_name , player , isFlip);
+ 			}
+		}
+		
+		function load_animation(anim_json_path, img_path,  x, y, anim_name, player, isFlip){
+			var frame_delay = 5;
+ 			$.getJSON(anim_json_path, function(frameData) {
+				frameData["images"] = [img_path];
+				var frames = frameData["frames"];
+				var anim_length = frames.length;
+				var frame_width = frames[0][2];
+				var frame_height = frames[0][3];
+				frameData["animations"][start_anim_name] = [0,anim_length-1, start_anim_name , frame_delay];
+				var anim_sprite_sheet = new createjs.SpriteSheet(frameData);
+				var anim_suffix = '';	
+				if (isFlip){
+					createjs.SpriteSheetUtils.addFlippedFrames(anim_sprite_sheet, true, false, false);
+					anim_suffix = '_h';	
+				}
+				var anim_act = new createjs.BitmapAnimation(anim_sprite_sheet);
+				anim_act.x =  x;
+				anim_act.y = y;
+				stage.addChild(anim_act);
+				player.anims[anim_name] = {anim_act:anim_act, frame_width:frame_width, frame_height:frame_height,current_anim:anim_name};
+				if (anim_name == 'idle'){
+					player.anims["idle"].anim_act.gotoAndPlay(start_anim_name+anim_suffix);	
+					player.currentState = 10; 
+					console.log(player.anims["idle"].anim_act);
+				}
+				
+			});
+		}
+ 
+		// This is the AI that determines the next move
+    // level=0: totaly random
+    // level=1: totaly "rational"
+
+    // possible move;
+    IDLE=          0;
+    WALK_FORWARD=  1;
+    WALK_BACKWARD= 2;
+    PUNCH=         3;
+    KICK=          4;
+    BLOCK=         5;
+    BEATEN=        6;
+
+    //constantes:
+    NEAR=         100;
+
+    // this is a methods that returns a random element from the given array
+    function or(choice){
+        return choice[Math.round(Math.random()*(choice.length-1))];
+    };
+
+    // return the distance between the opponents
+    function distance(a, b){
+        return Math.abs(a.position().left-b.position().left);
+    };
+
+	function anim_index_from_name(anim_to_act){
+		for(i=0; i<anim_act.length;i++){	
+			var anim_name = anim_act[i];
+			if(anim_to_act == anim_name)
+				return i;
+			
+		}
+        return 10;//or(anim_act);
+	}
+	
+    function nextMove(level, a, b){
+        if(Math.random() > level){
+            return Math.round(Math.random()*5);
+        }
+        var anim_to_act = or(anim_act);
+        return anim_index_from_name(anim_to_act);
+        switch(a.currentState){
+            // if the adversary is idle or moves away from us we get near him or attack ihm
+            case IDLE:
+            case WALK_BACKWARD:
+            case BLOCK:
+                if(distance(a,b) < NEAR){
+                    return or([KICK, PUNCH, WALK_BACKWARD]);
+                } else {
+                    return or([WALK_FORWARD, IDLE]);
+                }
+                break;
+            // if the adversary moves toward us we get away or attack ihm
+            case WALK_FORWARD:
+                if(distance(a,b) < NEAR){
+                    return or([KICK, PUNCH, WALK_BACKWARD]);
+                } else {
+                    return or([WALK_FORWARD, IDLE]);
+                }
+                break;
+            // if we are under attack we either block go back or try to fight back
+            case PUNCH:
+            case KICK:
+                return or([BLOCK, PUNCH, KICK, IDLE]);
+                break;
+            // if beaten we block or go back
+            case BEATEN:
+                return or([BLOCK, WALK_BACKWARD, IDLE]);
+                break;
+        }
+    }
+
+    function animate(player, enemy, isFlip){
+    	var nextState = nextMove(0.8, player, enemy);
+        var curent_anim_state = anim_act[nextState];
+        var last_anim_state = anim_act[player.currentState];
+ 
+        player.anims[last_anim_state].anim_act.gotoAndStop(-1);	
+    	var anim_suffix = '';	
+		if (isFlip){
+	 		anim_suffix = '_h';	
+		 	//curent_anim_state  = curent_anim_state;// + anim_suffix;
+		 }
+		 console.log(curent_anim_state,player.anims,player.anims[curent_anim_state],start_anim_name+anim_suffix);
+        if(player.anims[curent_anim_state]){
+        	player.anims[curent_anim_state].anim_act.gotoAndPlay(start_anim_name+anim_suffix);	
+        	player.currentState = nextState;
+        }
+    }
+ 
+	var action_detect = function(){
+	 
+        var cvsF = player;
+        var cvsLeft = cvs.x;
+ 
+        var aboboF = enemy;
+        var aboboLeft = abobo.x;
+
+		//hit?
+		if(cvsLeft+cvsF.animations[cvsF.currentState].width - 2 > aboboLeft){
+			if((cvsF.currentState == KICK || cvsF.currentState == PUNCH) && aboboF.currentState != BEATEN){
+				if (aboboF.currentState == KICK || aboboF.currentState == PUNCH) {
+					changeAnimation(abobo, aboboF.animations, BEATEN, aboboF.currentState);
+					aboboF.currentState = BEATEN;
+					changeAnimation(cvs, cvsF.animations, BEATEN, cvsF.currentState);
+					cvsF.currentState = BEATEN;
+				} else {
+					changeAnimation(abobo, aboboF.animations, BEATEN, aboboF.currentState);
+					aboboF.currentState = BEATEN;
+				}
+			} else if ((aboboF.currentState == KICK || aboboF.currentState == PUNCH) && cvsF.currentState != BEATEN) {
+				changeAnimation(cvs, cvsF.animations, BEATEN, cvsF.currentState);
+				cvsF.currentState = BEATEN;
+			}
+		}
+
+		//Move
+        if(cvsF.currentState == WALK_FORWARD){
+        	if((cvsLeft+cvsF.animations[cvsF.currentState].width+2) < aboboLeft){
+            	cvs.x(cvsLeft+2);
+        	}
+        } else if ((cvsLeft > 50) && (cvsF.currentState == WALK_BACKWARD)){
+            cvs.x(cvsLeft-2)
+        }
+		/*
+        if(aboboF.currentState == WALK_FORWARD){
+            if((cvsLeft+cvsF.animations[cvsF.currentState].width+2) < aboboLeft){
+            	abobo.x(aboboLeft - 2);
+            }
+        } else if ((aboboLeft < 650) && (aboboF.currentState == WALK_BACKWARD)){
+            abobo.x(aboboLeft + 2);
+        }
+
+        var al = abobo.position().left - aboboF.animations[aboboF.currentState].deltaX;
+        var cl = cvs.position().left - cvsF.animations[cvsF.currentState].deltaX;
+
+        var centerPos = (al - cl)/2 + cl;
+        scrollStage(-(centerPos-400)*0.5);
+		*/
+		return false;
+	};
+ 
+	</script>
+</head>
+<body onload="init();">
+
+	<header id="header" class="EaselJS">
+		<h1><span class="text-product">Easel<strong>JS</strong></span> Simple SpriteSheet Example</h1>
+		<p>A simple example of a sprite sheet using <strong>BitmapAnimation</strong>. This demos also shows playing named
+			animations (jump and run), and animation chaining using <strong>getAnimation("name").next</strong>.</p>
+	</header>
+
+	<div class="canvasHolder">
+		<canvas id="testCanvas" width="960" height="400"></canvas>
+	</div>
+</body>
+</html>

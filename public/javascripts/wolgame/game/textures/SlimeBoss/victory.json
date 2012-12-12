@@ -1,0 +1,25 @@
+{
+"images": ["victory.png"],
+"frames": [
+
+    [196, 390, 192, 192], 
+    [2, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [2, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "victory0001":[0], 
+        "victory0002":[1], 
+        "victory0003":[2], 
+        "victory0004":[3], 
+        "victory0005":[4], 
+        "victory0006":[5]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f687ca5fc1ffe52ecf2598c29a829f02$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

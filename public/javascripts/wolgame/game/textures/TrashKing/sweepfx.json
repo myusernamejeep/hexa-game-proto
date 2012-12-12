@@ -1,0 +1,45 @@
+{
+"images": ["sweepfx.png"],
+"frames": [
+
+    [778, 196, 192, 192], 
+    [584, 196, 192, 192], 
+    [390, 196, 192, 192], 
+    [196, 778, 192, 192], 
+    [196, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [778, 2, 192, 192], 
+    [584, 2, 192, 192], 
+    [390, 2, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [2, 390, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "lssweep10001":[0], 
+        "lssweep10002":[1], 
+        "lssweep10003":[2], 
+        "lssweep10004":[3], 
+        "lssweep20001":[4], 
+        "lssweep20002":[5], 
+        "lssweep20003":[6], 
+        "lssweep20004":[7], 
+        "tksweep10001":[8], 
+        "tksweep10002":[9], 
+        "tksweep10003":[10], 
+        "tksweep10004":[11], 
+        "tksweep20001":[12], 
+        "tksweep20002":[13], 
+        "tksweep20003":[14], 
+        "tksweep20004":[15]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:66aaace41b98a38543a05139a7269135$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

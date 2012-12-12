@@ -1,0 +1,19 @@
+{
+"images": ["roofgrab.png"],
+"frames": [
+
+    [196, 2, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "roofgrab0001":[0], 
+        "roofgrab0002":[1], 
+        "roofgrabidle0001":[2]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8bbd53525f9c6df8a50467c0727b26ca$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

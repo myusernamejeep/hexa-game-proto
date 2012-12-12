@@ -1,0 +1,51 @@
+{
+"images": ["Exp1_plazma_exp_lrg.png"],
+"frames": [
+
+    [1106, 170, 182, 166], 
+    [922, 170, 182, 166], 
+    [1106, 2, 182, 166], 
+    [922, 2, 182, 166], 
+    [738, 338, 182, 166], 
+    [738, 170, 182, 166], 
+    [738, 2, 182, 166], 
+    [554, 338, 182, 166], 
+    [554, 170, 182, 166], 
+    [554, 2, 182, 166], 
+    [370, 338, 182, 166], 
+    [370, 170, 182, 166], 
+    [370, 2, 182, 166], 
+    [186, 338, 182, 166], 
+    [186, 170, 182, 166], 
+    [186, 2, 182, 166], 
+    [2, 338, 182, 166], 
+    [2, 170, 182, 166], 
+    [2, 2, 182, 166]
+],
+"animations": {
+    
+        "Exp1_plazma_exp_lrg-004":[0], 
+        "Exp1_plazma_exp_lrg-005":[1], 
+        "Exp1_plazma_exp_lrg-006":[2], 
+        "Exp1_plazma_exp_lrg-007":[3], 
+        "Exp1_plazma_exp_lrg-008":[4], 
+        "Exp1_plazma_exp_lrg-009":[5], 
+        "Exp1_plazma_exp_lrg-010":[6], 
+        "Exp1_plazma_exp_lrg-011":[7], 
+        "Exp1_plazma_exp_lrg-012":[8], 
+        "Exp1_plazma_exp_lrg-013":[9], 
+        "Exp1_plazma_exp_lrg-014":[10], 
+        "Exp1_plazma_exp_lrg-015":[11], 
+        "Exp1_plazma_exp_lrg-016":[12], 
+        "Exp1_plazma_exp_lrg-017":[13], 
+        "Exp1_plazma_exp_lrg-018":[14], 
+        "Exp1_plazma_exp_lrg-019":[15], 
+        "Exp1_plazma_exp_lrg-020":[16], 
+        "Exp1_plazma_exp_lrg-021":[17], 
+        "Exp1_plazma_exp_lrg-022":[18]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4a0c49fb04fa7ca8c1cdfa56135c95bc$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

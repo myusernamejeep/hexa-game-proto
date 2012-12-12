@@ -1,0 +1,35 @@
+{
+"images": ["Exp1_impactring.png"],
+"frames": [
+
+    [962, 2, 94, 92], 
+    [866, 2, 94, 92], 
+    [770, 2, 94, 92], 
+    [674, 2, 94, 92], 
+    [578, 2, 94, 92], 
+    [482, 2, 94, 92], 
+    [386, 2, 94, 92], 
+    [290, 2, 94, 92], 
+    [194, 2, 94, 92], 
+    [98, 2, 94, 92], 
+    [2, 2, 94, 92]
+],
+"animations": {
+    
+        "Exp1_impactring-001":[0], 
+        "Exp1_impactring-002":[1], 
+        "Exp1_impactring-003":[2], 
+        "Exp1_impactring-004":[3], 
+        "Exp1_impactring-005":[4], 
+        "Exp1_impactring-006":[5], 
+        "Exp1_impactring-007":[6], 
+        "Exp1_impactring-008":[7], 
+        "Exp1_impactring-009":[8], 
+        "Exp1_impactring-010":[9], 
+        "Exp1_impactring-011":[10]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:29da198ac10ceb2e7fe86678d38761e4$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

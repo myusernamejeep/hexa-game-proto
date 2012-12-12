@@ -1,0 +1,61 @@
+{
+"images": ["slides.png"],
+"frames": [
+
+    [778, 584, 192, 192], 
+    [584, 778, 192, 192], 
+    [584, 584, 192, 192], 
+    [778, 390, 192, 192], 
+    [584, 390, 192, 192], 
+    [390, 778, 192, 192], 
+    [390, 584, 192, 192], 
+    [390, 390, 192, 192], 
+    [778, 196, 192, 192], 
+    [584, 196, 192, 192], 
+    [390, 196, 192, 192], 
+    [196, 778, 192, 192], 
+    [196, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [778, 2, 192, 192], 
+    [584, 2, 192, 192], 
+    [390, 2, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [2, 390, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "skidturn0001":[0], 
+        "skidturn0002":[1], 
+        "skidturn0003":[2], 
+        "skidturn0004":[3], 
+        "slopeslideb0001":[4], 
+        "slopeslideb0002":[5], 
+        "slopeslideb0003":[6], 
+        "slopeslideb0004":[7], 
+        "slopeslidef0001":[8], 
+        "slopeslidef0002":[9], 
+        "slopeslidef0003":[10], 
+        "slopeslidef0004":[11], 
+        "superskidb0001":[12], 
+        "superskidb0002":[13], 
+        "superskidb0003":[14], 
+        "superskidb0004":[15], 
+        "superskidb0005":[16], 
+        "superskidb0006":[17], 
+        "superskidf0001":[18], 
+        "superskidf0002":[19], 
+        "superskidf0003":[20], 
+        "superskidf0004":[21], 
+        "superskidf0005":[22], 
+        "superskidf0006":[23]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a334d11f979385834ad7d39db8eeba17$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

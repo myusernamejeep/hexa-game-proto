@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EaselJS: Simple SpriteSheet Example</title>
+
+	<link href="assets/demoStyles.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="../src/easeljs/utils/UID.js"></script>
+	<script type="text/javascript" src="../src/easeljs/geom/Matrix2D.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/DisplayObject.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Container.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Stage.js"></script>
+	<script type="text/javascript" src="../src/easeljs/events/MouseEvent.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Shape.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/Graphics.js"></script>
+	<script type="text/javascript" src="../src/easeljs/utils/Ticker.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/SpriteSheet.js"></script>
+	<script type="text/javascript" src="../src/easeljs/display/BitmapAnimation.js"></script>
+	<script type="text/javascript" src="../src/easeljs/geom/Rectangle.js"></script>
+	<script type="text/javascript" src="../src/easeljs/utils/SpriteSheetUtils.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="../javascripts/wolgame/require.js"></script>
+ 
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+	  http://code.createjs.com 
+	  http://localhost:8888/github/wol-site/public/examples/SpriteSheetEffect.html
+	  -->
+
+	<script type="text/javascript">
+		var stage;
+ var x = 0, y = 0;
+		var anim_act = ['Exp1_basic_lrg',
+'Exp1_codeexp',
+'Exp1_gaslargerer',
+'Exp1_gaslrg',
+'Exp1_gassmall',
+'Exp1_gassmalllonger',
+'Exp1_impactring',
+'Exp1_iso_watersplash',
+'Exp1_longflamey',
+'Exp1_medbasic',
+'Exp1_pixilssmall',
+'Exp1_plazma_exp_lrg',
+'Exp1_plazma_exp_small',
+'Exp1_randomring',
+'Exp1_randomring2',
+'Exp1_randomsmall',
+'Exp1_shockwave_large',
+'Exp1_shockwave_large2',
+'Exp1_sparkring',
+'Exp1_swirl360'];
+		var coins_act = ['001-Action01',
+'002-Action02',
+'003-Attack01',
+'004-Attack02',
+'005-Attack03',
+'006-Weapon01',
+'007-Weapon02',
+'008-Weapon03',
+'009-Weapon04',
+'010-Weapon05',
+'011-Weapon06',
+'012-Heal01',
+'013-Heal02',
+'014-Heal03',
+'015-Fire01',
+'016-Ice01',
+'017-Thunder01',
+'018-Water01',
+'019-Earth01',
+'020-Wind01',
+'021-Light01',
+'022-Darkness01',
+'023-Burst01',
+'024-Support01',
+'025-Support02',
+'026-Support03',
+'027-Support04',
+'028-State01',
+'029-Emotion01',
+'030-Explosion01'];
+		var start_anim_name = 'run';
+		var x = 0, y = 0; i = 0;
+ 		var coins = {}
+		var magics = {}
+		function init() {
+			stage = new createjs.Stage(document.getElementById("testCanvas"));
+ 			/*
+ 			for(j=1; j<= anim_act.length; j++){
+ 				var magic_name = anim_act[j-1];
+ 				
+ 		 		load_act_anims_json(magics,magic_name, x, y, "ExplosionsFX");
+ 			 		 	 
+ 			}*/
+ 			
+ 			for(j=1; j<= coins_act.length; j++){
+ 				var magic_name = coins_act[j-1];
+ 				
+ 		 		load_act_anims_png(magics,magic_name, x, y, "skill");
+ 			 	x += 200; 
+ 			 	
+ 			 	if (j%4 == 0){
+ 			 		y += 200; x = 0;
+ 			 	}	 	 
+ 			} 
+ 			 
+			createjs.Ticker.setFPS(60);
+			createjs.Ticker.addListener(stage);
+			 
+			setInterval(function(){
+				var num = Math.round(Math.random()*anim_act.length);
+				var magic_name = anim_act[num];
+				 
+				//var magic = magics[ magic_name ].anim_act;
+				
+				//console.log(magic,magics[ magic_name ],magic_name,num);
+				// magic.gotoAndPlay("run");
+				/*if (Math.random() > 0.5){
+					magic.gotoAndPlay("run");
+				}else{
+					magic.gotoAndPlay("run_h");
+				}*/
+				  
+			},1000); 
+			
+			 createjs.Ticker.addListener(window);
+		}
+ 		function load_act_anims_png(player, textures_name, x, y, folder, isFlip){
+			 
+			var images_pth = "../javascripts/wolgame/game/" +folder + "/"+ textures_name +".png";
+			var anim_sprite_magic = {
+				"animations":
+				{
+					"run": [0, 25, "run" , 10],
+					"end" : [-1]
+				},
+				"images": [images_pth],
+				"frames": {
+						"height": 192,
+						"width":192,
+						"regX": 0,
+						"regY": 0 
+				}
+			};
+			var anim_sprite_sheet = anim_sprite_magic;
+			/*var anim_sprite_sheet;
+			if (folder == 'magic'){
+				anim_sprite_sheet = anim_sprite_magic;
+			}else{
+				anim_sprite_sheet = anim_sprite_coins;
+			}	*/
+			//createjs.SpriteSheetUtils.addFlippedFrames(anim_sprite_sheet, true, false, false);
+ 			var frameData = new createjs.SpriteSheet(anim_sprite_sheet);
+			//var anim_sprite_sheet = new createjs.SpriteSheet(frameData);
+			var anim_suffix = '';	
+			if (isFlip){
+				createjs.SpriteSheetUtils.addFlippedFrames(frameData, true, false, false);
+				anim_suffix = '_h';	
+			}
+			var anim_act = new createjs.BitmapAnimation(frameData);
+			anim_act.x =  x;
+			anim_act.y = y;
+			stage.addChild(anim_act);
+			console.log(anim_act);
+			anim_act.gotoAndPlay("run");
+			player[textures_name] = {anim_act:anim_act, current_anim:"run", textures_name:textures_name };
+			 
+		}
+		function load_act_anims_json(player, anim_name, _x, _y, folder, isFlip){
+			 
+			var img_path = "../javascripts/wolgame/game/" +folder + "/"+ anim_name +".png";
+			var script_path = "../javascripts/wolgame/game/" +folder + "/"+ anim_name +".json";
+				
+			var frame_delay = 5;
+ 			$.getJSON(script_path, function(frameData) {
+ 				
+ 			 		
+				frameData["images"] = [img_path];
+				var frames = frameData["frames"];
+				var anim_length = frames.length;
+				var frame_width = frames[0][2];
+				var frame_height = frames[0][3];
+				x += frame_width;
+				if (i%4 == 0){
+ 			 	 	y += frame_height; x = 0; 
+ 			 	} 
+ 			 	i ++;
+				frameData["animations"][start_anim_name] = [0,anim_length-1, start_anim_name , frame_delay];
+				var anim_sprite_sheet = new createjs.SpriteSheet(frameData);
+				var anim_suffix = '';	
+				if (isFlip){
+					createjs.SpriteSheetUtils.addFlippedFrames(anim_sprite_sheet, true, false, false);
+					anim_suffix = '_h';	
+				}
+				var anim_act = new createjs.BitmapAnimation(anim_sprite_sheet);
+				anim_act.x =  x;
+				anim_act.y = y;
+				stage.addChild(anim_act);
+				player[anim_name] = {anim_act:anim_act, frame_width:frame_width, frame_height:frame_height,current_anim:anim_name};
+				anim_act.gotoAndPlay(start_anim_name);
+				console.log('add to',anim_name, x,y, player[anim_name]);
+				
+			});
+	  
+		}
+ 
+		 
+ 
+	</script>
+</head>
+<body onload="init();">
+
+	<header id="header" class="EaselJS">
+		<h1><span class="text-product">Easel<strong>JS</strong></span> Simple SpriteSheet Example</h1>
+		<p>A simple example of a sprite sheet using <strong>BitmapAnimation</strong>. This demos also shows playing named
+			animations (jump and run), and animation chaining using <strong>getAnimation("name").next</strong>.</p>
+	</header>
+
+	<div class="canvasHolder">
+		<canvas id="testCanvas" width="960" height="1780"></canvas>
+	</div>
+</body>
+</html>

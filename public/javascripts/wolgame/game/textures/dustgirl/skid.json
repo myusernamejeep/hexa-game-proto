@@ -1,0 +1,49 @@
+{
+"images": ["skid.png"],
+"frames": [
+
+    [390, 584, 192, 192], 
+    [390, 390, 192, 192], 
+    [778, 196, 192, 192], 
+    [584, 196, 192, 192], 
+    [390, 196, 192, 192], 
+    [196, 778, 192, 192], 
+    [196, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [778, 2, 192, 192], 
+    [584, 2, 192, 192], 
+    [390, 2, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [2, 390, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "skid0001":[0], 
+        "skid0002":[1], 
+        "skidturn0001":[2], 
+        "skidturn0002":[3], 
+        "skidturn0003":[4], 
+        "skidturn0004":[5], 
+        "superskidb0001":[6], 
+        "superskidb0002":[7], 
+        "superskidb0003":[8], 
+        "superskidb0004":[9], 
+        "superskidb0005":[10], 
+        "superskidb0006":[11], 
+        "superskidf0001":[12], 
+        "superskidf0002":[13], 
+        "superskidf0003":[14], 
+        "superskidf0004":[15], 
+        "superskidf0005":[16], 
+        "superskidf0006":[17]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:96bee13bdf91776cf9ba6eea4ff7e4b7$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

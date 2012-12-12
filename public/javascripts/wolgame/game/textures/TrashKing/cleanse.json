@@ -1,0 +1,21 @@
+{
+"images": ["cleanse.png"],
+"frames": [
+
+    [196, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "cleanse0001":[0], 
+        "cleanse0002":[1], 
+        "cleanse0003":[2], 
+        "cleanse0004":[3]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:ca7a760a6f83679ff5038b39a6f3dbde$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

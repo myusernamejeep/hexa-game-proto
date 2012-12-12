@@ -1,0 +1,25 @@
+{
+"images": ["stun.png"],
+"frames": [
+
+    [196, 390, 192, 192], 
+    [2, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [2, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "hitwall10001":[0], 
+        "hitwall20001":[1], 
+        "stun10001":[2], 
+        "stun10002":[3], 
+        "stun20001":[4], 
+        "stun20002":[5]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:81553d817a22006eed12557a46352497$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

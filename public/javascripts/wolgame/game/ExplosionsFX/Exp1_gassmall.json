@@ -1,0 +1,55 @@
+{
+"images": ["Exp1_gassmall.png"],
+"frames": [
+
+    [410, 198, 100, 96], 
+    [308, 198, 100, 96], 
+    [206, 394, 100, 96], 
+    [206, 296, 100, 96], 
+    [206, 198, 100, 96], 
+    [410, 100, 100, 96], 
+    [308, 100, 100, 96], 
+    [206, 100, 100, 96], 
+    [104, 394, 100, 96], 
+    [104, 296, 100, 96], 
+    [104, 198, 100, 96], 
+    [104, 100, 100, 96], 
+    [410, 2, 100, 96], 
+    [308, 2, 100, 96], 
+    [206, 2, 100, 96], 
+    [104, 2, 100, 96], 
+    [2, 394, 100, 96], 
+    [2, 296, 100, 96], 
+    [2, 198, 100, 96], 
+    [2, 100, 100, 96], 
+    [2, 2, 100, 96]
+],
+"animations": {
+    
+        "Exp1_gassmall-000":[0], 
+        "Exp1_gassmall-001":[1], 
+        "Exp1_gassmall-002":[2], 
+        "Exp1_gassmall-003":[3], 
+        "Exp1_gassmall-004":[4], 
+        "Exp1_gassmall-005":[5], 
+        "Exp1_gassmall-006":[6], 
+        "Exp1_gassmall-007":[7], 
+        "Exp1_gassmall-008":[8], 
+        "Exp1_gassmall-009":[9], 
+        "Exp1_gassmall-010":[10], 
+        "Exp1_gassmall-011":[11], 
+        "Exp1_gassmall-012":[12], 
+        "Exp1_gassmall-013":[13], 
+        "Exp1_gassmall-014":[14], 
+        "Exp1_gassmall-015":[15], 
+        "Exp1_gassmall-016":[16], 
+        "Exp1_gassmall-017":[17], 
+        "Exp1_gassmall-018":[18], 
+        "Exp1_gassmall-019":[19], 
+        "Exp1_gassmall-020":[20]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:1e1e206f4098f4b54d79b8e13b3ab818$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

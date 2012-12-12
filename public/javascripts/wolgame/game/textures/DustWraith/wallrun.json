@@ -1,0 +1,45 @@
+{
+"images": ["wallrun.png"],
+"frames": [
+
+    [196, 584, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [2, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [2, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "wallrun0001":[0], 
+        "wallrun0002":[1], 
+        "wallrun0003":[2], 
+        "wallrun0004":[3], 
+        "wallrun0005":[4], 
+        "wallrun0006":[5], 
+        "wallrun0007":[6], 
+        "wallrun0008":[7], 
+        "wallsweep0001":[8], 
+        "wallsweep0002":[9], 
+        "wallsweep0003":[10], 
+        "wallsweep0004":[11], 
+        "wallsweep0005":[12], 
+        "wallsweep0006":[13], 
+        "wallsweep0007":[14], 
+        "wallsweep0008":[15]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:2186e0a13b936c1bd990ab5f2511c60f$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

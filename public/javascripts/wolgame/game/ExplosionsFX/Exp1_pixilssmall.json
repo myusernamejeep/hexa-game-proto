@@ -1,0 +1,45 @@
+{
+"images": ["Exp1_pixilssmall.png"],
+"frames": [
+
+    [1412, 2, 92, 86], 
+    [1318, 2, 92, 86], 
+    [1224, 2, 92, 86], 
+    [1130, 2, 92, 86], 
+    [1036, 2, 92, 86], 
+    [942, 2, 92, 86], 
+    [848, 2, 92, 86], 
+    [754, 2, 92, 86], 
+    [660, 2, 92, 86], 
+    [566, 2, 92, 86], 
+    [472, 2, 92, 86], 
+    [378, 2, 92, 86], 
+    [284, 2, 92, 86], 
+    [190, 2, 92, 86], 
+    [96, 2, 92, 86], 
+    [2, 2, 92, 86]
+],
+"animations": {
+    
+        "Exp1_pixilssmall-000":[0], 
+        "Exp1_pixilssmall-001":[1], 
+        "Exp1_pixilssmall-002":[2], 
+        "Exp1_pixilssmall-003":[3], 
+        "Exp1_pixilssmall-004":[4], 
+        "Exp1_pixilssmall-005":[5], 
+        "Exp1_pixilssmall-006":[6], 
+        "Exp1_pixilssmall-007":[7], 
+        "Exp1_pixilssmall-008":[8], 
+        "Exp1_pixilssmall-009":[9], 
+        "Exp1_pixilssmall-010":[10], 
+        "Exp1_pixilssmall-011":[11], 
+        "Exp1_pixilssmall-012":[12], 
+        "Exp1_pixilssmall-013":[13], 
+        "Exp1_pixilssmall-014":[14], 
+        "Exp1_pixilssmall-015":[15]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:44c823c9b6fa6e13c8d8f2caad5a04df$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

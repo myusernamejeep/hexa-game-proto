@@ -1,0 +1,41 @@
+{
+"images": ["sprint.png"],
+"frames": [
+
+    [390, 196, 192, 192], 
+    [196, 778, 192, 192], 
+    [196, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [778, 2, 192, 192], 
+    [584, 2, 192, 192], 
+    [390, 2, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [2, 390, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "sprint0001":[0], 
+        "sprint0002":[1], 
+        "sprint0003":[2], 
+        "sprint0004":[3], 
+        "sprint0005":[4], 
+        "sprint0006":[5], 
+        "sprint0007":[6], 
+        "sprint0008":[7], 
+        "sprint0009":[8], 
+        "sprint0010":[9], 
+        "sprint0011":[10], 
+        "sprint0012":[11], 
+        "sprint0013":[12], 
+        "sprint0014":[13]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:77345ac59b88fc110173453fd7a08164$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

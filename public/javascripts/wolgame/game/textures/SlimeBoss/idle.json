@@ -1,0 +1,33 @@
+{
+"images": ["idle.png"],
+"frames": [
+
+    [196, 778, 192, 192], 
+    [196, 584, 192, 192], 
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [196, 390, 192, 192], 
+    [2, 390, 192, 192], 
+    [196, 196, 192, 192], 
+    [2, 196, 192, 192], 
+    [196, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "idle0001":[0], 
+        "idle0002":[1], 
+        "idle0003":[2], 
+        "idle0004":[3], 
+        "idle0005":[4], 
+        "idle0006":[5], 
+        "idle0007":[6], 
+        "idle0008":[7], 
+        "idle0009":[8], 
+        "idle0010":[9]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4911fcf49e1f94b3e49b9c4a9f912aad$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

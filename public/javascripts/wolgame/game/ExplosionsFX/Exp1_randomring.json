@@ -1,0 +1,47 @@
+{
+"images": ["Exp1_randomring.png"],
+"frames": [
+
+    [2, 1890, 122, 116], 
+    [2, 1772, 122, 116], 
+    [2, 1654, 122, 116], 
+    [2, 1536, 122, 116], 
+    [2, 1418, 122, 116], 
+    [2, 1300, 122, 116], 
+    [2, 1182, 122, 116], 
+    [2, 1064, 122, 116], 
+    [2, 946, 122, 116], 
+    [2, 828, 122, 116], 
+    [2, 710, 122, 116], 
+    [2, 592, 122, 116], 
+    [2, 474, 122, 116], 
+    [2, 356, 122, 116], 
+    [2, 238, 122, 116], 
+    [2, 120, 122, 116], 
+    [2, 2, 122, 116]
+],
+"animations": {
+    
+        "Exp1_randomring-000":[0], 
+        "Exp1_randomring-001":[1], 
+        "Exp1_randomring-002":[2], 
+        "Exp1_randomring-003":[3], 
+        "Exp1_randomring-004":[4], 
+        "Exp1_randomring-005":[5], 
+        "Exp1_randomring-006":[6], 
+        "Exp1_randomring-007":[7], 
+        "Exp1_randomring-008":[8], 
+        "Exp1_randomring-009":[9], 
+        "Exp1_randomring-010":[10], 
+        "Exp1_randomring-011":[11], 
+        "Exp1_randomring-012":[12], 
+        "Exp1_randomring-013":[13], 
+        "Exp1_randomring-014":[14], 
+        "Exp1_randomring-015":[15], 
+        "Exp1_randomring-016":[16]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:374140196956f8862538f055d03bfd77$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

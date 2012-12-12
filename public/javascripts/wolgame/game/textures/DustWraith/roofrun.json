@@ -1,0 +1,29 @@
+{
+"images": ["roofrun.png"],
+"frames": [
+
+    [2, 778, 192, 192], 
+    [2, 584, 192, 192], 
+    [2, 390, 192, 192], 
+    [2, 196, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192], 
+    [2, 2, 192, 192]
+],
+"animations": {
+    
+        "roofrun0001":[0], 
+        "roofrun0002":[1], 
+        "roofrun0003":[2], 
+        "roofrun0004":[3], 
+        "roofsweep0001":[4], 
+        "roofsweep0002":[5], 
+        "roofsweep0003":[6], 
+        "roofsweep0004":[7]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5be5b9c081e4fd600a11ebc52ae27e6f$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}

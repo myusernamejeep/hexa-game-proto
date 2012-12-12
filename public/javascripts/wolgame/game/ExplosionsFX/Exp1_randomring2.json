@@ -1,0 +1,33 @@
+{
+"images": ["Exp1_randomring2.png"],
+"frames": [
+
+    [974, 2, 106, 104], 
+    [866, 2, 106, 104], 
+    [758, 2, 106, 104], 
+    [650, 2, 106, 104], 
+    [542, 2, 106, 104], 
+    [434, 2, 106, 104], 
+    [326, 2, 106, 104], 
+    [218, 2, 106, 104], 
+    [110, 2, 106, 104], 
+    [2, 2, 106, 104]
+],
+"animations": {
+    
+        "Exp1_randomring2-000":[0], 
+        "Exp1_randomring2-001":[1], 
+        "Exp1_randomring2-002":[2], 
+        "Exp1_randomring2-003":[3], 
+        "Exp1_randomring2-004":[4], 
+        "Exp1_randomring2-005":[5], 
+        "Exp1_randomring2-006":[6], 
+        "Exp1_randomring2-007":[7], 
+        "Exp1_randomring2-008":[8], 
+        "Exp1_randomring2-009":[9]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:82f8c47cd7b21deac147817adc51f85a$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EasalJS"
+]
+}
